@@ -25,7 +25,7 @@ const projectsData = [
       title: "Personal Portfolio",
       description: "My Own Portfolio",
       tech: ["HTML", "CSS", "JavaScript", "Next.js", "Vercel"],
-      github: "",
+      github: "https://github.com/alehuh-io/personal-website.git",
       image: "/assets/projs/jeep-it-up.png",
       features: ["Lorem ipsum", "todo-list"],
     },
@@ -65,7 +65,6 @@ const projectsData = [
 
 export default function Portfolio() {
     const [tab, setTab] = useState("projects");
-    const [modal, setModal] = useState(null);
     const [modalData, setModalData] = useState(null);
 
 
@@ -84,7 +83,6 @@ export default function Portfolio() {
             
         </div>
 
-      {/* Projects Tab */}
         {/* Projects Tab */}
         {tab === "projects" && (
         <div className="port-tab projects-tab port-wrapper">
@@ -141,9 +139,8 @@ export default function Portfolio() {
                             <a
                                 href={modalData.github}
                                 target="_blank"
-                                rel="noopener noreferrer"
-                                className="github-btn" id="modal-github"
-                            >
+                                className="github-btn"
+                            ><i class="bx bxl-github"></i> 
                                 GitHub
                             </a>
                             )}
