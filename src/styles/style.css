@@ -922,10 +922,10 @@ ul {
 
 .footer-bg {
   width: 100%;           /* responsive */
-  background: linear-gradient(360deg, var(--main-color), var(--bg-color));
   backdrop-filter: blur(10px);
   padding: 2rem;
-  box-shadow: 0 5px 10px -5px black; /* subtle shadow */
+  box-shadow: 0 5px 10px -5px var(--main-color); /* subtle shadow */
+  border: 1px solid var(--main-color);
   text-align: center;   /* center the text */
 }
 
