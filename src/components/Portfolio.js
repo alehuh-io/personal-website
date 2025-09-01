@@ -15,19 +15,19 @@ const projectsData = [
       title: "Jeep it Up!",
       description:
         "A desktop productivity app that blends a Pomodoro timer and a to-do list in a fun, jeepney-themed interface.",
-      tech: ["HTML", "CSS", "JavaScript", "React.js", "Electron"],
-      github: "",
+      tech: ["HTML", "CSS", "JavaScript", "React.js", "Electron.js", "Node.js"],
+      github: "https://github.com/alehuh-io/jeep-it-up",
       image: "/assets/projs/jeep-it-up.png",
-      features: ["Lorem ipsum", "todo-list"],
+      features: ["Cross-Platform Desktop App", "Integrated Task Management", "Animated UI Elements", "Cross-Platform Compatibility"],
     },
     {
       id: 2,
       title: "Personal Portfolio",
-      description: "My Own Portfolio",
-      tech: ["HTML", "CSS", "JavaScript", "Next.js", "Vercel"],
+      description: "A personal portfolio showcasing my background, skills, projects, and certifications. Built with modern web technologies, this portfolio highlights my ability to design, develop, and deliver engaging digital experiences. It features detailed projects, a responsive tech stack display, and a centralized hub for my professional achievements, demonstrating both my creativity and technical expertise.",
+      tech: ["React", "CSS", "JavaScript", "Next.js", "Vercel"],
       github: "https://github.com/alehuh-io/personal-website.git",
       image: "/assets/projs/jeep-it-up.png",
-      features: ["Lorem ipsum", "todo-list"],
+      features: ["Responsive Design", "Animated UI Elements", "Modal Popups"],
     },
   ];
   
@@ -53,8 +53,8 @@ const projectsData = [
   const techStackData = [
     { title: "HTML", image: "/assets/tech-stack/html.png" },
     { title: "CSS", image: "/assets/tech-stack/css.png" },
-    { title: "JavaScript", image: "/assets/tech-stack/javascript.png" },
     { title: "Python", image: "/assets/tech-stack/python.png" },
+    { title: "JavaScript", image: "/assets/tech-stack/javascript.png" },
     { title: "C/C++", image: "/assets/tech-stack/c.png" },
     { title: "React.js", image: "/assets/tech-stack/react.png" },
     { title: "Node.js", image: "/assets/tech-stack/nodejs.png" },
