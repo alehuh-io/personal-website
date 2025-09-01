@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export default function About() {
     return (
 
@@ -9,7 +10,7 @@ export default function About() {
 
         <div className="about-info">
             <div className="about-content">
-                <h3>Welcome, I'm</h3>
+                <h3>Welcome, I&apos;m</h3>
                 <h2>Aleja Jan Lois Velasco</h2>
                 <p> I am a 22-year-old Computer Engineering graduate passionate about building efficient software solutions. I focus on continuously learning and improving my skills to create impactful applications. Known for being dedicated and goal-oriented, I thrive in collaborative environments and communicate effectively. 
                     <br /> <br /> With strong adaptability and a commitment to growth, my goal is to develop innovative systems that solve real-world problems and contribute positively to the community.</p>
@@ -21,7 +22,7 @@ export default function About() {
             </div>
 
             <div className="about-img">
-                <img src="/assets/gen-files/toga.png" alt="" />
+                <Image src="/assets/gen-files/toga.png" alt="" />
             </div>
 
         </div>

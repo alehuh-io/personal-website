@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/grid";
-
+import Image from 'next/image';
 import { Navigation, Pagination, Grid } from "swiper/modules";
 
 
@@ -103,7 +103,7 @@ export default function Portfolio() {
             {projectsData.map((proj) => (
                 <SwiperSlide key={proj.id}>
                 <div className="projects">
-                    <img className="proj-img" src={proj.image} alt={proj.title} />
+                    <Image className="proj-img" src={proj.image} alt={proj.title} />
                     <div className="proj-content">
                         <h3 className="proj-title">{proj.title}</h3>
                         <p className="proj-descrip">{proj.description}</p>
@@ -163,7 +163,7 @@ export default function Portfolio() {
                     </div>
 
                     <div className="right">
-                        <img id="modal-image" src={modalData.image} alt={modalData.title} />
+                        <Image id="modal-image" src={modalData.image} alt={modalData.title} />
                         <div class="key-features">
                             <h2 id="key"><i class="bx bx-code-alt"></i> Key Features</h2>
                             <ul>
@@ -200,7 +200,7 @@ export default function Portfolio() {
                 <div className="certs">
                     <div class="certs-info">
                         <div class="certs-img">
-                            <img className='certs-img' src={cert.image} alt={cert.title} />
+                            <Image className='certs-img' src={cert.image} alt={cert.title} />
                         </div>
 
                         <div class="certs-content">
@@ -239,7 +239,7 @@ export default function Portfolio() {
                 <div className="tech">
                     <div class="tech-info"></div>
                     <div class="tech-img">
-                        <img src={tech.image} alt={tech.title} />
+                        <Image src={tech.image} alt={tech.title} />
                     </div>
                   
                     <h3 className="tech-title">{tech.title}</h3>

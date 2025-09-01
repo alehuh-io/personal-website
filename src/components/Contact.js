@@ -16,8 +16,6 @@ export default function Contact() {
                         
                 </div>
 
-                
-
                 <div className="contact-info">
                     <div className="get-in-touch">
                         <h3>Get in touch!</h3>
