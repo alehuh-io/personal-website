@@ -22,7 +22,7 @@ export default function About() {
             </div>
 
             <div className="about-img">
-                <Image src="/assets/gen-files/toga.png" alt="" />
+                <img src="/assets/gen-files/toga.png" alt="" />
             </div>
 
         </div>

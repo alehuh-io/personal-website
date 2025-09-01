@@ -42,7 +42,7 @@ const projectsData = [
     },
     {
       id: 2,
-      title: "Learning SQL Programming",
+      title: "SQL Programming",
       issuer: "LinkedIn Learning",
       issued: "Aug 2025",
       image: "/assets/certs/linkedin.png",
@@ -106,12 +106,7 @@ export default function Portfolio() {
                         <h3 className="proj-title">{proj.title}</h3>
                         <p className="proj-descrip">{proj.description}</p>
                         <div className="footer">
-                            <div className="tech-used">
-                                {proj.tech.map((t, i) => (
-                                    <span key={i} className="tech-tag">{t}</span>
-                                ))}
-                            </div>
-                            <a className="view-more" onClick={() => setModalData(proj)}>View More</a>
+                        <a className="view-more" onClick={() => setModalData(proj)}><i class="bx bx-link-external"></i></a>
                         </div>
                     </div>
                 </div>
@@ -119,62 +114,61 @@ export default function Portfolio() {
             ))}
             </Swiper>
 
-            {/* Modal: Rendered once outside the Swiper */}
+            {/* Modal */}
             {modalData && (
-            <div className="modal" onClick={() => setModalData(null)}>
-                <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                    <span
-                        className="modal-close"
-                        onClick={() => setModalData(null)}
-                    >
-                        &times;
-                    </span>
-
-                    <div className="left">
-                        <h2 id="modal-title">{modalData.title}</h2>
-                        <p id="modal-description">{modalData.description}</p>
-
-                        <div className="github">
-                            {modalData.github && (
-                            <a
-                                href={modalData.github}
-                                target="_blank"
-                                className="github-btn"
-                            ><i class="bx bxl-github"></i> 
-                                GitHub
-                            </a>
-                            )}
-                        </div>
-                        
-                        <div className="tech">
-                            <h2 id="tech">
-                                <i className="bx bx-code-alt"></i> Technologies Used
-                            </h2>
-                            <div id="modal-tech-used">
-                                {modalData.tech.map((t, i) => (
-                                <span key={i} className="tech-tag">{t}</span>
-                                ))}
+                <div className="modal" onClick={() => setModalData(null)}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <span
+                            className="modal-close"
+                            onClick={() => setModalData(null)}
+                        >
+                            &times;
+                        </span>
+    
+                        <div className="left">
+                            <h2 id="modal-title">{modalData.title}</h2>
+                            <p id="modal-description">{modalData.description}</p>
+    
+                            <div className="github">
+                                {modalData.github && (
+                                <a
+                                    href={modalData.github}
+                                    target="_blank"
+                                    className="github-btn"
+                                ><i class="bx bxl-github"></i> GitHub
+                                </a>
+                                )}
                             </div>
+                            
+                            <div className="tech">
+                                <h2 id="tech">
+                                    <i className="bx bx-code-alt"></i> Technologies Used
+                                </h2>
+                                <div id="modal-tech-used">
+                                    {modalData.tech.map((t, i) => (
+                                    <span key={i} className="tech-tag">{t}</span>
+                                    ))}
+                                </div>
+                            </div>
+    
                         </div>
-
-                    </div>
-
-                    <div className="right">
-                        <Image id="modal-image" src={modalData.image} alt={modalData.title} />
-                        <div class="key-features">
-                            <h2 id="key"><i class="bx bx-code-alt"></i> Key Features</h2>
-                            <ul>
-                            {modalData.features.map((f, i) => (
-                                <li key={i}>{f}</li>
-                            ))}
-                            </ul>
+    
+                        <div className="right">
+                            <Image id="modal-image" src={modalData.image} alt={modalData.title} />
+                            <div class="key-features">
+                                <h2 id="key"><i class="bx bx-code-alt"></i> Key Features</h2>
+                                <ul>
+                                {modalData.features.map((f, i) => (
+                                    <li key={i}>{f}</li>
+                                ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+                )}
             </div>
             )}
-        </div>
-        )}
 
 
     {/* Certifications Tab */}
@@ -231,18 +225,19 @@ export default function Portfolio() {
               1024: { slidesPerView: 6, grid: { rows: 2, fill: "row" } },
             }}
           >
-            {techStackData.map((tech, i) => (
-              <SwiperSlide key={i}>
-                <div className="tech">
-                    <div class="tech-info"></div>
-                    <div class="tech-img">
-                        <Image src={tech.image} alt={tech.title} />
-                    </div>
-                  
-                    <h3 className="tech-title">{tech.title}</h3>
+          {techStackData.map((tech, i) => (
+            <SwiperSlide key={i}>
+              <div className="tech">
+                <div className="tech-info">
+                    <div className="tech-img">
+                          <Image src={tech.image} alt={tech.title} />
+                      </div>
+                    
+                      <h3 className="tech-title">{tech.title}</h3>
                 </div>
-              </SwiperSlide>
-            ))}
+              </div>
+            </SwiperSlide>
+          ))}
           </Swiper>
         </div>
       )}
