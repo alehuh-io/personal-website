@@ -42,7 +42,7 @@ const projectsData = [
     },
     {
       id: 2,
-      title: "SQL Programming",
+      title: "Learning SQL",
       issuer: "LinkedIn Learning",
       issued: "Aug 2025",
       image: "/assets/certs/linkedin.png",
@@ -195,9 +195,9 @@ export default function Portfolio() {
                         </div>
 
                         <div class="certs-content">
-                            <h3>{cert.title}</h3>
-                            <h4>{cert.issuer}</h4>
-                            <h5>{cert.issued}</h5>
+                            <h3 className="certs-title">{cert.title}</h3>
+                            <h4 className="certs-where">{cert.issuer}</h4>
+                            <h5 className="certs-when">{cert.issued}</h5>
                             <a className='btn certs-btn' href={cert.url} target="_blank" rel="noopener noreferrer">
                                 View Credential
                             </a>
