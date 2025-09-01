@@ -23,9 +23,9 @@ export default function Contact() {
                     </div>
 
                     <div className="link-btns">
-                        <button className="btn2" ><i className="bx bxl-github"></i></button>
-                        <button className="btn2" ><i className="bx bxl-linkedin"></i></button>
-                        <button className="btn2" ><i className="bx bxl-gmail"></i></button>
+                        <button className="btn2" onClick={() => window.location.href = "https://github.com/alehuh-io"}><i className="bx bxl-github"></i></button>
+                        <button className="btn2" onClick={() => window.location.href = "https://www.linkedin.com/in/aleja-jan-lois-velasco-b13595308/"}><i className="bx bxl-linkedin"></i></button>
+                        <button className="btn2" onClick={() => window.location.href = "mailto:velascoleja@gmail.com"}><i className="bx bxl-gmail"></i></button>
                     </div>
                 </div>
                 
