@@ -76,10 +76,10 @@ html {
 }
 
 :root {
-    --bg-color: #3F1A2B;
+    --bg-color: 000000;
     --text-color: #FBF8FB;
-    --main-color: #B2183A;
-    --second-color: #ED4A69;
+    --main-color: CF0F47;
+    --second-color: FF0B55;
 }
 
 body {
